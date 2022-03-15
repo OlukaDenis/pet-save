@@ -72,9 +72,7 @@ class ApiModule {
   @Provides
   fun provideHttpLoggingInterceptor(loggingInterceptor: LoggingInterceptor): HttpLoggingInterceptor {
     val interceptor = HttpLoggingInterceptor(loggingInterceptor)
-
     interceptor.level = HttpLoggingInterceptor.Level.BODY
-
     return interceptor
   }
 }
